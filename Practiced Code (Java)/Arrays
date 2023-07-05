@@ -1,0 +1,15 @@
+public class PairedArrays {
+    public static void main(String[] args) {
+        
+        int indexNum[] = {0, 1, 2};
+        String email[] = {"scentpearl@gmail.com", "jassynavarro@gmail.com", "janenavarro@gmail.com"};
+        String userName[] = {"scentPearl", "jassynavarro", "janenavarro"};
+        String passWord[] = {"scentpearl@gmail.com", "jassynavarro@gmail.com", "janenavarro@gmail.com"};
+
+        System.out.println("Index: " + indexNum[0]);
+        System.out.println("Email: " + email[0]);
+        System.out.println("UserName: " + userName[0]);
+        System.out.println("Password: " + passWord[0]);
+        
+    }
+}
