@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+import javax.sound.midi.Soundbank;
+import javax.swing.text.html.ListView;
+public class QuizGame {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        String question = "What is 1+1?";
+        int answer = 2;
+        int userInput;
+        int lives = 3;
+
+        System.out.println(question);
+        System.out.print("Answer: ");
+        userInput = sc.nextInt();
+
+        while (lives >= 1) {
+            if(userInput == answer) {
+                System.out.println("\nYOU WON!");
+                break;
+            }
+            else if(userInput != answer && lives > 1) {
+                lives--;
+                System.out.println("\nYOU GOT " + lives + " LIFE/LIVES LEFT!");
+                System.out.print("TRY AGAIN: ");
+                userInput = sc.nextInt();
+            }
+            else if (lives == 1){
+                System.out.println("\nYOU LOST!");
+                break;
+            }
+            
+        }
+    }
+}
