@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class GradeAverageProgram {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        double English;
+        double Math;
+        double Filipino;
+        double Computer;
+        double Average;
+
+        System.out.println("Enter your Grades");
+        System.out.print("English:");     
+        English = sc.nextDouble();
+        System.out.print("Mathematics:");     
+        Math = sc.nextDouble();
+        System.out.print("Filipino:");     
+        Filipino = sc.nextDouble();
+        System.out.print("Computer:");     
+        Computer = sc.nextDouble();      
+
+        Average = (English + Math + Filipino + Computer)/4;
+        if(Average > 100) {
+            System.out.println("\nAverage: " + Average + "\nInvalid Grade");
+        }
+        else if(98 <= Average && Average == 100) {
+            System.out.println("\nAverage: " + Average + "\nWith Highest Honors");
+        }
+        else if(95 <= Average && Average <= 97.99) {
+            System.out.println("\nAverage: " + Average + "\nWith High Honors");
+        }
+        else if(90 <= Average && Average <= 94.99) {
+            System.out.println("\nAverage: " + Average + "\nWith Honors");
+        }
+        else if(75 <= Average && Average <= 89.99) {
+            System.out.println("\nAverage: " + Average + "\nPassed");
+        }
+        else {
+            System.out.println("\nAverage: " + Average + "\nFailed");
+        }
+        sc.close();
+    }
+}
