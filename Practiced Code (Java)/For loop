@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class AuthenticationSimulation {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        String userName[] = {"jassyNavarro", "jelaineVenice"};
+        String passWord[] = {"012jassy", "345ven"};
+        String user;
+        String pass;
+        
+        System.out.print("Enter user name: ");
+        user = sc.nextLine();
+        System.out.print("Enter password: ");
+        pass = sc.nextLine();
+        
+        for(int i = 0; i < userName.length; i++) {
+            if(user.equals(userName[i]) && pass.equals(passWord[i])) {
+                System.out.println("\nWelcome, " + userName[i]);
+            break;
+            }
+            else {
+                System.out.println("\nAccount not Found");
+            break;
+            }
+        }
+        sc.close();
+    }
+}
