@@ -95,11 +95,13 @@ public class logIn extends javax.swing.JFrame {
 
     private void logInActionPerformed(java.awt.event.ActionEvent evt) {                                      
         
+        //gets the user's input from the email & password text field.
         String user = email.getText();
         String pass = password.getText();
 
         try {
-            FileReader fr = new FileReader("users.txt");
+        //Instantiation of file reader. This reads the content of the txt file.     
+            FileReader fr = new FileReader("users.txt");  
             Scanner reader = new Scanner(fr);
             reader.useDelimiter("[,\n]");
             
@@ -107,6 +109,9 @@ public class logIn extends javax.swing.JFrame {
             String pw = reader.next();
             
             while(reader.hasNext()) {
+        //trims = divides the row into two rows.
+        //One is for the email.
+        //Second is for the password.
                 if(user.equals(em.trim()) && pass.equals(pw.trim())) {
                     homePage homePageFrame = new homePage();
                     homePageFrame.setVisible(true);
@@ -115,6 +120,7 @@ public class logIn extends javax.swing.JFrame {
                     this.dispose();
                     break;
                 }
+        //shows message for wrong log in details.        
                 JOptionPane.showMessageDialog(null, "Incorrect Log in Details");
                 break;
             }                                   
