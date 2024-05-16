@@ -74,14 +74,16 @@ public class signUp extends javax.swing.JFrame{
 
     private void signInActionPerformed(java.awt.event.ActionEvent evt) {                                       
         
+        //gets the input from the email and password text field.
         String user = email.getText();
         String pass = password.getText();
 
         try {
+        //Instantiation. creates the txt file at the same time writes inside the created txt.    
             FileWriter fw = new FileWriter("users.txt", true);
             fw.write(""+user+", "+pass);
             fw.write(System.getProperty("line.separator"));
-            fw.write(System.getProperty("line.separator"));
+            fw.write(System.getProperty("line.separator"));    
             JOptionPane.showMessageDialog(null, "Registration Successful"); 
             fw.close();                                    
         } catch (Exception e) {
